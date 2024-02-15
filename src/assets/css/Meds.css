@@ -1,0 +1,17 @@
+/* Meds.css */
+
+.text-column {
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+.image-column {
+    padding: 20px;
+    background-color: white;
+}
+
+.therapy-image {
+    max-width: 100%;
+    height: auto;
+}

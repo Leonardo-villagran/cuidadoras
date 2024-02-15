@@ -1,0 +1,24 @@
+.personal {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.personal-content {
+    margin-bottom: 20px;
+}
+
+.personal-title {
+    font-size: 2.5rem;
+    color: black; /* Color del título */
+}
+
+.personal-subtitle em {
+    font-style: italic;
+    color: black; /* Color del subtítulo en cursiva */
+}
+
+.personal-image {
+    max-width: 100%;
+    height: auto;
+}

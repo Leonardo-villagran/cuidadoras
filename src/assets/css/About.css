@@ -1,0 +1,18 @@
+.about-section {
+    height: 480px; /* Altura deseada */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.about-content {
+    padding: 20px;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+}

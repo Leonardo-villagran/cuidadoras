@@ -1,0 +1,10 @@
+.hero-section {
+  background-size: cover; /* Ajusta la imagen de fondo al tamaño del contenedor */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen de fondo */
+  height: 480px; /* Altura de la sección hero */
+}
+
+.hero-section h1 {
+  font-size: 3rem; /* Tamaño de la fuente para el texto */
+  color: #fff; /* Color del texto */
+}
