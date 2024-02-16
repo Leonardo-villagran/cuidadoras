@@ -1,21 +1,23 @@
 import HeroSection from './components/HeroSection';
 import About from './components/About';
 import Personal from './components/Personal';
-import Therapy from './components/Therapy';
 import Meds from './components/Meds';
-import AllDay from './components/AllDay';
 import Contact from './components/Contact';
+import ServiceTitle from './components/ServiceTitle';
+import Service from './components/Service';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
     return (
-        <div className="App">
+        <div>
             <HeroSection />
             <About />
             <Personal />
             <Meds />
-            <Therapy />
-            <AllDay />  
+            <ServiceTitle />
+            <Service/>
             <Contact /> 
+            <Footer />
         </div>
     );
 };

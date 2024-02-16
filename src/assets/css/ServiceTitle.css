@@ -1,15 +1,15 @@
-.personal {
+.servicio {
     background-color: #ffffff;
     padding: 50px 0;
     text-align: center;
 }
 
-.personal-title {
+.servicio-title {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.personal-subtitle {
+.servicio-subtitle {
     font-size: 1.2rem;
     font-style: italic;
     color: #666;

@@ -1,18 +1,49 @@
 .about-section {
-    height: 480px; /* Altura deseada */
+    position: relative;
+    height: 400px; /* Ajusta la altura según tus necesidades */
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: white;
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 0; /* Asegura que la superposición esté detrás del contenido */
 }
 
 .about-content {
-    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px; /* Ajusta el relleno según sea necesario */
+    text-align: center;
+    z-index: 1;
 }
 
-.about-content h2 {
+.about-section__title,
+.about-section__subtitle,
+.about-section__description {
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+.about-section__title {
     font-size: 2.5rem;
+    margin-bottom: 10px; /* Espacio entre el título y el subtítulo */
 }
 
-.about-content p {
+.about-section__subtitle {
     font-size: 1.2rem;
+    margin-bottom: 20px; /* Espacio entre el subtítulo y la descripción */
+}
+
+.about-section__description {
+    font-size: 1rem;
 }

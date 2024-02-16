@@ -54,23 +54,31 @@ const ContactForm: React.FC = () => {
     };
 
     return (
-        <div style={{ backgroundColor: 'black', color: 'white', padding: '20px' }}>
-            <h2 style={{ color: 'white' }}>Formulario de Contacto</h2>
-            <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="name" style={{ color: 'white' }}>Nombre:</label>
-                    <input type="text" className="form-control" id="name" name="name" value={formData.name} onChange={handleChange} required style={{ backgroundColor: 'black', color: 'white' }} />
+        <div id="contact" className="container">
+            <div className="row justify-content-center">
+                <div className="col-md-6">
+                    <div className="card">
+                        <div className="card-body">
+                            <h2 className="card-title">Formulario de Contacto</h2>
+                            <form onSubmit={handleSubmit}>
+                                <div className="form-group">
+                                    <label htmlFor="name">Nombre:</label>
+                                    <input type="text" className="form-control" id="name" name="name" value={formData.name} onChange={handleChange} required />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="email">Email:</label>
+                                    <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} required />
+                                </div>
+                                <div className="form-group">
+                                    <label htmlFor="message">Mensaje:</label>
+                                    <textarea className="form-control" id="message" name="message" rows={4} value={formData.message} onChange={handleChange} required />
+                                </div>
+                                <button type="submit" className="btn btn-primary">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="email" style={{ color: 'white' }}>Email:</label>
-                    <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} required style={{ backgroundColor: 'black', color: 'white' }} />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="message" style={{ color: 'white' }}>Mensaje:</label>
-                    <textarea className="form-control" id="message" name="message" rows={4} value={formData.message} onChange={handleChange} required style={{ backgroundColor: 'black', color: 'white' }} />
-                </div>
-                <button type="submit" className="btn btn-primary" style={{ backgroundColor: 'white', color: 'black' }}>Enviar</button>
-            </form>
+            </div>
         </div>
     );
 };

@@ -1,8 +1,8 @@
 import '../assets/css/Personal.css'; // Importa el archivo de estilos para el componente
 
-const Personal = () => {
+const Personal: React.FC = () => {
     return (
-        <div className="personal">
+        <div id="personal" className="personal">
             <div className="personal-content">
                 <h1 className="personal-title">Servicios de atención en el hogar</h1>
                 <p className="personal-subtitle"><em>Atención personalizada</em></p>

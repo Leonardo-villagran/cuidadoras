@@ -1,0 +1,14 @@
+.list-group-item {
+    border: none; /* Elimina el borde */
+    padding: 0.5rem 0; /* Ajusta el relleno según sea necesario */
+    position: relative; /* Para posicionar el círculo */
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%; /* Hace que el círculo tenga bordes redondeados */
+    display: inline-block; /* Para que se muestre en línea con el texto */
+    margin-right: 10px; /* Espacio entre el círculo y el texto */
+}

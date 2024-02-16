@@ -1,0 +1,13 @@
+.card-footer {
+    text-align: center;
+}
+
+.card-footer p {
+    margin-bottom: 0; /* Eliminar cualquier margen en la parte inferior del párrafo */
+    line-height: 1; /* Establecer el espacio entre líneas igual al tamaño de la fuente */
+}
+
+/* Nueva clase para controlar el espaciado entre párrafos */
+.no-margin-bottom {
+    margin-bottom: 0 !important; /* Eliminar cualquier margen en la parte inferior del párrafo */
+}

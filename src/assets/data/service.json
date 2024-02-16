@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "imageTop": "c_02.jpg",
+        "datos": ["El cuidado más flexible", "Adaptado a tus necesidades"]
+    },
+    {
+        "id": 2,
+        "imageTop": "c_03.jpg",
+        "datos": ["Cuidados con o sin vigilia", "Horario de 22:00 a 06:00"]
+    },
+    {
+        "id": 3,
+        "imageTop": "c_04.jpg",
+        "datos": ["Cuando más lo necesites", "Asistencia completa"]
+    }
+]
