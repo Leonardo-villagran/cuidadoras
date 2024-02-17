@@ -3,7 +3,7 @@ import medsData from '../assets/data/data.json'; // Importa el archivo JSON con 
 
 const Meds: React.FC = () => {
     return (
-        <div className="container ">
+        <div id="meds" className="container ">
             {medsData.map((med, index) => (
                 <div className="row" key={index} id={med.name}>
                     <div className="col-md-6 pb-4">

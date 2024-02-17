@@ -3,7 +3,7 @@ import '../assets/css/HeroSection.css'; // Archivo de estilos para el componente
 
 const HeroSection: React.FC = () => {
     return (
-        <div className='container pb-4'>
+        <div id="hero" className='container pb-4'>
             <div className="hero-section" style={{ backgroundImage: `url('./images/01.jpg')`}}>
                 <div className="hero-content">
                     <h1 className="hero-section__title">Descubre tu equipo ideal de cuidadoras</h1>
