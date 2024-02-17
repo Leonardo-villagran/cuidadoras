@@ -1,0 +1,1 @@
+import{j as e}from"./index-C021wjRP.js";const s=()=>e.jsx("div",{id:"serviceTitle",className:"servicio",children:e.jsx("div",{className:"servicio-content",children:e.jsx("h1",{className:"servicio-title",children:"Selecciona el mejor servicio"})})});export{s as default};
