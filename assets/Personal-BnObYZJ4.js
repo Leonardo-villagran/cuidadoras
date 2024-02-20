@@ -1,1 +1,0 @@
-import{j as e}from"./index-DSbKch0O.js";const a=()=>e.jsx("div",{id:"personal",className:"personal",children:e.jsxs("div",{className:"personal-content",children:[e.jsx("h1",{className:"personal-title",children:"Servicios de atención en el hogar"}),e.jsx("p",{className:"personal-subtitle",children:e.jsx("em",{children:"Atención personalizada"})})]})});export{a as default};
