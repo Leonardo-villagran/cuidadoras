@@ -7,7 +7,7 @@ const Meds: React.FC = () => {
             {medsData.map((med, index) => (
                 <div className="row" key={index} id={med.name}>
                     <div className="col-md-6 pb-4">
-                        <div className="card h-100 bg-dark text-white">
+                        <div className="card card-custom h-100 bg-dark text-white">
                             <div className="card-body">
                                 <h1 className="card-title">{med.title}</h1>
                                 <p className="card-text">{med.text}</p>
@@ -15,7 +15,7 @@ const Meds: React.FC = () => {
                         </div>
                     </div>
                     <div className="col-md-6 pb-4">
-                        <div className="card h-100">
+                        <div className="card card-custom h-100">
                             <img src={`./images/${med.image}`} className="card-img-top" alt={med.title} />
                         </div>
                     </div>

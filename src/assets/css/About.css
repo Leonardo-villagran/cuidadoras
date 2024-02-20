@@ -5,6 +5,7 @@
     background-position: center;
     color: white;
     overflow: hidden; /* Evita que el contenido se desborde */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Agregar sombra */
 }
 
 .about-section::before {

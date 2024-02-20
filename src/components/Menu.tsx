@@ -1,37 +1,55 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import { Navbar, Nav } from 'react-bootstrap';
 
 const Menu: React.FC = () => {
-    // Estado para controlar si el menú está colapsado o expandido
     const [isMenuCollapsed, setIsMenuCollapsed] = useState(true);
+    const menuRef = useRef<HTMLDivElement>(null);
 
-    // Función para alternar entre colapsado y expandido
     const toggleMenuCollapse = () => {
         setIsMenuCollapsed(!isMenuCollapsed);
     };
 
+    useEffect(() => {
+        const handleResize = () => {
+            if (!isMenuCollapsed && menuRef.current) {
+                const navbarHeight = menuRef.current.offsetHeight;
+                const heroSection = document.getElementById('hero');
+                if (heroSection) {
+                    const heroHeight = heroSection.offsetHeight;
+                    const totalHeight = navbarHeight + heroHeight;
+                    const currentScrollPosition = window.scrollY;
+                    if (currentScrollPosition < totalHeight) {
+                        window.scrollTo({
+                            top: totalHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [isMenuCollapsed]);
+
     return (
         <div className="sticky-top">
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-                    <a className="navbar-brand ps-2" href="#">Cuidadoras</a>
-                    <button className="navbar-toggler" type="button" onClick={toggleMenuCollapse} aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className={`collapse navbar-collapse ${isMenuCollapsed ? '' : 'show'}`} id="navbarNav">
-                        <ul className="navbar-nav ml-auto">
-                            <li className="nav-item">
-                                <a className="nav-link ps-2" href="#personal">Empresa</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link ps-2" href="#serviceTitle">Servicios</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link ps-2" href="#contact">Contacto</a>
-                            </li>
-                        </ul>
-                    </div>
-            </nav>
+            <Navbar expand="lg" bg="dark" variant="dark" fixed="top" ref={menuRef}>
+                <Navbar.Brand href="#">Cuidadoras</Navbar.Brand>
+                <Navbar.Toggle aria-controls="navbarNav" onClick={toggleMenuCollapse} />
+                <Navbar.Collapse id="navbarNav" className={`${isMenuCollapsed ? '' : 'show'}`}>
+                    <Nav className="ml-auto">
+                        <Nav.Link href="#personal">Empresa</Nav.Link>
+                        <Nav.Link href="#serviceTitle">Servicios</Nav.Link>
+                        <Nav.Link href="#contact">Contacto</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
         </div>
     );
 };
 
 export default Menu;
+
