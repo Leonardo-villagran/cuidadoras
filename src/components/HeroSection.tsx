@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
     };
 
     return (
-        <Container id="hero" className='pb-4 mt-6' style={{ marginTop: menuHeight }}>
+        <Container id="hero" className='pb-4' style={{ marginTop: menuHeight + 40 }}> {/* Ajusta el valor del margen superior aquí */}
             <div className="hero-section" style={{ backgroundImage: `url('./images/01.jpg')` }}>
                 <div className="hero-content">
                     <h1 className="hero-section__title">Descubre tu equipo ideal de cuidadoras</h1>
